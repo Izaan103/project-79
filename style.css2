@@ -1,0 +1,75 @@
+body {
+            background-image: url("http://www.mayfairpizzaco.com/images/bg/parties.jpg");
+}
+
+
+.container-full{
+    background:rgba(0,0,0,0.2);
+}
+
+.container-full h1, h3 {
+    text-align:center;
+    text-shadow:1px 1px 2px #aba6a6;
+    
+    
+}
+
+.container-full p{
+    text-align:center;
+    font-size:2em;
+}
+
+.container-full a:hover{
+    text-shadow:2px 2px 4px black;
+}
+
+
+.thumbnail h3{
+    text-align:center;
+}
+
+:not(h3, img) > .row a {
+    
+    opacity:0.4;
+}
+
+:not(h4, .panel-body) > #backaccordion{
+     opacity:0.3;
+     border-radius-:5%;
+     width:100%;
+    
+}
+
+#pretext p {
+    font-color:black;
+}
+
+.inset {
+  padding-left: 25px;
+  padding-top: 25px; 
+}
+
+.thumbnail #pizzaMenu img{
+    width:270px;
+    height:180px;
+}
+
+.modal-header, h2, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+
+#saladsPrice {
+    text-align:center;
+}
+
+.cart {
+    
+    border-bottom-style:solid;
+    border-color: #5cb85c;
+    border-width:3px;
+    text-align:center;
+    
+}

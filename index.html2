@@ -1,0 +1,133 @@
+<head>
+    <title> Lou's Woodfire Pizza </title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src ="https://code.jquery.com/jquery-git.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" >
+    <link rel="stylesheet" href="public/style.css">
+    
+    <!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    
+</head>
+
+<body ng-app="pizzApp">
+    
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Lou's Wood<span class="glyphicon glyphicon-fire"></span> Pizza</a>
+    </div>
+    
+    <form class="navbar-form navbar-left">
+      <div class="input-group" ng-controller="SearchFood">
+        <input type="text" class="form-control" placeholder="Search" ng-model="food">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit" ng-click="search(food)">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form> 
+      
+      <ul class="nav navbar-nav navbar-right" ng-controller="UserMenuNav">
+      <li href="#login" id="login" class="dropdown">
+          <!-- 
+          <a class="dropdown-toggle" data-toggle="dropdown" id="logName" ng-if="user.user" ng-cloak>{{user.user.name}}
+          </a>
+          <a if="logName" ng-if="!user.user" data-toggle="modal" data-target="#modalLogin">Login</a>
+          -->
+          <a if="logName"  data-toggle="modal" data-target="#modalLogin">Login</a>
+        <ul id="logged" class="dropdown-menu">
+          <li><a href="#perfil" id="perfil">Profile</a></li>
+          <li><a href="#pedidos" id="pedidos">My Orders</a></li>
+          <li class="divider"></li>
+          <li><a id="logout" href="#logout">Log out</a></li>
+        </ul>
+      </li>
+      <li><a href="#carrito" id="carrito">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+    </ul>
+  </div>
+</nav> 
+    <br>
+    <br>
+    <br>
+    <div id="greeting" class="container-full">
+        <div class="container">
+            <h1>Welcome to Lou's Woodfire Pizza</h1>
+            <br>
+            <p><a href="#menu" class="btn btn-success" id="order" type="button">Order <span class="glyphicon glyphicon-cutlery"></span></a></p>
+            
+        </div>
+    </div>
+    <div id="viewdiv"></div>
+    
+    <!-- Modal -->
+  <div class="modal fade" id="modalLogin" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2><span class="glyphicon glyphicon-lock"></span> Login</h2>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+    </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger " data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+    
+<!-- <div class="container">
+<footer>
+    
+    <ul>
+        <li><a href="#">Quienes Somos</a></li>
+                <li><a href="#">Mision / Vision</a></li>
+                <li><a href="#">Contacto</a></li>
+    </ul>
+    
+    </footer>-->
+     <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    
+    <!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/app/auth.js"></script>
+</body>
+
+</html>
